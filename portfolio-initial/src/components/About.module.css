@@ -1,0 +1,63 @@
+.wrapper {
+	display: grid;
+	gap: 30px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-radius: 12px;
+	background-color: var(--bg-surface);
+	border: 1px solid var(--color-border);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.info {
+	padding: 20px;
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
+
+.icon {
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+}
+
+.title {
+	margin-bottom: 10px;
+	color: var(--text-primary);
+	font-family: var(--font-heading);
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+}
+
+.description {
+	color: var(--text-muted);
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+/* Responsive Layout for Mobile Screens */
+@media only screen and (max-width: 560px) {
+	.card {
+		grid-template-columns: 1fr;
+	}
+	
+	/* Swaps order on mobile so the image icon displays above text */
+	.card > div:first-child {
+		grid-row: 2;
+	}
+}

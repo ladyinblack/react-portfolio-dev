@@ -1,0 +1,54 @@
+/* Import your custom game-dev typography from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap');
+
+/* CSS Variables for our Custom Theme */
+:root {
+	--bg-primary: #FAF6E3;
+	--bg-surface: #D8DBBD;
+	--color-border: #B59F78;
+	--text-primary: #2A3663;
+	--text-muted: #475569;
+	
+	--font-heading: 'Rajdhani', sans-serif;
+	--font-body: 'Inter', sans-serif;
+}
+
+/* Global Reset for cross-browser consistency */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: var(--font-body);
+}
+
+/* Reusable typography utility classes */
+.title {
+	font-family: var(--font-heading);
+	margin: 40px 0 20px 0;
+	color: var(--text-primary);
+	font-size: 40px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.description {
+	margin-bottom: 30px;
+	color: var(--text-muted);
+	font-size: 18px;
+}
+
+/* Main application wrapper container */
+.App {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding: 20px;
+	text-align: center;
+}

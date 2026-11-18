@@ -1,0 +1,45 @@
+.wrapper {
+	width: 100%;
+	text-align: center;
+	padding: 40px 20px;
+	color: var(--text-muted);
+	background-color: var(--bg-surface);
+	border-top: 1px solid var(--color-border);
+	margin-top: auto;
+}
+
+.title {
+	color: var(--text-primary);
+	margin-bottom: 12px;
+	font-family: var(--font-heading);
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+}
+
+.contactInfo {
+	font-size: 15px;
+	margin: 4px 0;
+	color: var(--text-muted);
+}
+
+.socials {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 150px;
+	margin: 20px auto 0 auto;
+	place-items: center;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon:hover {
+	cursor: pointer;
+	transform: translateY(-2px);
+	opacity: 0.8;
+}
